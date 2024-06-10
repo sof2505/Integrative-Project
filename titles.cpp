@@ -5,11 +5,11 @@ Titles::Titles()
     rating = 0;
 }
 
-Titles::Titles(string _title, string genre, float _rating)
+Titles::Titles(string _title, string _genre, float _rating, float _duration)
 {
-    this ->title = title;
-    this ->genre = genre;
-    this ->rating = rating;
+    title = _title;
+    genre = _genre;
+    rating = _rating;
 }
 
 string Titles::show()

@@ -7,12 +7,16 @@ class Titles
     private:
         string title;
         float rating;
+        string genre;
+        float duration;
     public:
         Titles();
-        Titles(string title, float rating);
-        //pure virtual funciton
+        Titles(string title, string genre, float rating, float duration);
+        // virtual funciton
         virtual string show();
         string getTitle();
         int getRating();
+        string getGenre();
+        float getDuration();
 };
 #endif

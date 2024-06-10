@@ -9,7 +9,6 @@ int main(){
     cout << m1.show() << endl;
 }
 
-//XD
 
 /*
 #include <iostream>
