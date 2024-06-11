@@ -51,8 +51,29 @@ string Series::show() const {
     string serieoutput;
     for (const auto& serie : SeriesData) {
         serieoutput += "ID: " + serie[0] + " Title: " + serie[1] + "\n"
-        + "   Duration: " + serie[2] + " minutes\n" + "  Genre: " + serie[3] + "\n  Episode: " + serie[4]
-        + "   Season: " + serie[5] + "\n" + "  Rating " +  serie[6] + "\n";
+                            + "   Duration: " + serie[2] + " minutes    "
+                            + "   Genre: " + serie[3] + "\n"
+                            + "   Episode: " + serie[4] + "    "
+                            + "   Season: " + serie[5] + "\n"
+                            + "   Rating: " + serie[6] + "\n";
     }
     return serieoutput;
 }
+
+string Series::showRatedSeries() const {
+    string ratedseries = "";
+    for (const auto& serie : SeriesData) {
+        if (serie[0] == "S2") {
+            if (serie[6] == "2") {
+                ratedseries += "ID: " + serie[0] + " Title: " + serie[1] + "\n"
+                            + "   Duration: " + serie[2] + " minutes    "
+                            + "   Genre: " + serie[3] + "\n"
+                            + "   Episode: " + serie[4] + "    "
+                            + "   Season: " + serie[5] + "\n"
+                            + "   Rating: " + serie[6] + "\n";
+            }
+        }
+    }
+    return ratedseries;
+}
+
