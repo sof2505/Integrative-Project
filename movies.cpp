@@ -38,18 +38,17 @@ void Movies::loadMovies(const string& fileName) {
     }
 }
 
-string Movies::ratedMovies()
-{
-    string movieoutput;
+string Movies::ratedMovies() const {
+    string ratedmovies="";
     for (const auto& movie : movieData) {
-        if (movie[4] == "5")
+        if (movie[4] == "3")
         {
-            movieoutput += "ID: " + movie[0] + " Title: " + movie[1] + "\n"
+            ratedmovies += "ID: " + movie[0] + " Title: " + movie[1] + "\n"
             + "   Duration: " + movie[2] + " minutes\n" + ".  Genre: " + movie[3]
             + ".  Rating: " + movie[4] + "\n\n";
         }
     }
-    return movieoutput;
+    return ratedmovies;
 }
 
 string Movies::show() const {
