@@ -36,6 +36,12 @@ int main() {
 
         switch (opcion) {
             case 1: 
+                system("cls");
+                cout << "Movies: " << endl;
+                cout << movies.show() << endl;
+
+                cout << "\nSeries: " << endl;
+                cout << serie.show() << endl;
                 system("pause>nul"); 
                 break;
 
@@ -59,14 +65,23 @@ int main() {
                 break;
 
             case 6:
+
                 repeat = false;
                 break;
+            
 
+            default:
+                cout << "Error,  try again." << endl;
+                system("pause");
+                break;
 
         }
 
 
     } while (repeat);
+
+    cout << "Goodbye!" << endl;
+
     return 0;
 }
 
