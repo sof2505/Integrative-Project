@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     Movies movies;
     movies.loadMovies("movies.csv");
-    cout << movies.show();
+    cout << movies.ratedMovies();
 
     return 0;
 
