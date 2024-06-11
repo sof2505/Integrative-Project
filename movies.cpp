@@ -55,8 +55,8 @@ string Movies::show() const {
     string movieoutput;
     for (const auto& movie : movieData) {
         movieoutput += "ID: " + movie[0] + " Title: " + movie[1] + "\n"
-        + "   Duration: " + movie[2] + " minutes\n" + ".  Genre: " + movie[3]
-        + ".  Rating: " + movie[4] + "\n\n";
+        + "   Duration: " + movie[2] + " minutes\n" + "  Genre: " + movie[3]
+        + "   Rating: " + movie[4] + "\n\n";
     }
     return movieoutput;
 }

@@ -1,4 +1,8 @@
 #include "series.hpp"
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <string>
 Series::Series()
 {
 
@@ -18,12 +22,37 @@ int Series::getEpisode(){
     return episode;
 }
 
-string Series::show()
-{
-    cout << "The title is: " << title << endl << "  Genre: " << genre << "  Rating: "<< rating << endl;
-    cout << "  Season: " << season << endl << "  Episode: " << episode << endl;
-    return 0;
+void Series::loadSeries(const string& fileName) {
+    ifstream file(fileName);
+    string line;
+
+    if (file.is_open()) {
+        while (getline(file, line)) {
+            istringstream ss(line);
+            string id, title, genre, rating, duration, episode, season;
+            getline(ss, id, ','); //stringstream
+            getline(ss, title, ',');
+            getline(ss, duration, ',');
+            getline(ss, genre, ',');
+            getline(ss, episode, ',');
+            getline(ss, season, ',');
+            getline(ss, rating, ',');
+
+            vector<string> serie = {id, title, duration, genre, episode, season, rating};
+            SeriesData.push_back(serie); //unir en pushback
+        }
+        file.close();
+    } else {
+        cerr << "Unable to open file " << fileName << endl; // cerr= mensaje de error
+    }
 }
 
-
-
+string Series::show() const {
+    string serieoutput;
+    for (const auto& serie : SeriesData) {
+        serieoutput += "ID: " + serie[0] + " Title: " + serie[1] + "\n"
+        + "   Duration: " + serie[2] + " minutes\n" + "  Genre: " + serie[3] + "\n  Episode: " + serie[4]
+        + "   Season: " + serie[5] + "\n" + "  Rating " +  serie[6] + "\n";
+    }
+    return serieoutput;
+}
