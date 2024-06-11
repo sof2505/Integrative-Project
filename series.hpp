@@ -8,5 +8,8 @@ class Series:public Titles{
         int episode;
     public:
         Series();
-        Series(string _title, string _genre, float _rating, int season, int episode);
+        Series(int _id, string _title, string _genre, float _rating, float _duration,  int _season, int _episode);
+        int getSeason();
+        int getEpisode();
+        string show();
 };

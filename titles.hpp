@@ -1,22 +1,28 @@
 #ifndef TITLES
 #define TITLES
+
 #include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
-class Titles
-{
-    private:
-        string title;
-        float rating;
-        string genre;
-        float duration;
-    public:
-        Titles();
-        Titles(string title, string genre, float rating, float duration);
-        // virtual funciton
-        virtual string show();
-        string getTitle();
-        int getRating();
-        string getGenre();
-        float getDuration();
+
+class Titles {
+protected:
+    int id;
+    string title;
+    string genre;
+    float rating;
+    float duration;
+
+public:
+    Titles();
+    Titles(int _id, const string& _title, const string& _genre, float _rating, float _duration);
+    const string& getTitle() const;
+    float getRating() const;
+    const string& getGenre() const;
+    float getDuration() const;
+
+    virtual string show() const = 0; 
 };
-#endif
+
+#endif 

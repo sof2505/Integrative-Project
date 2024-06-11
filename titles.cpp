@@ -1,39 +1,38 @@
 #include "titles.hpp"
+#include <iostream>
+#include <string>
+using namespace std;
+
 Titles::Titles()
 {
-    string msg = "Untitled";
-    rating = 0;
+    id = 0;
+    title = "Untitled";
+    genre = "";
+    rating = 0; 
+    duration = 0;
 }
 
-Titles::Titles(string _title, string _genre, float _rating, float _duration)
+Titles::Titles(int _id, const string& _title, const string& _genre, float _rating, float _duration)
 {
+    id = _id;
     title = _title;
     genre = _genre;
     rating = _rating;
+    duration = _duration;
 }
 
-string Titles::show()
-{
-    cout << "The title is: " << title << endl << "  Genre: " << genre << "  Rating: "<< rating << endl;
-    return 0;
-}
-
-string Titles::getTitle()
-{
+const string& Titles::getTitle() const {
     return title;
 }
 
-int Titles::getRating()
-{
+float Titles::getRating() const {
     return rating;
 }
 
-string Titles::getGenre()
-{
+const string& Titles::getGenre() const {
     return genre;
 }
 
-float Titles::getDuration()
-{
+float Titles::getDuration() const {
     return duration;
 }
