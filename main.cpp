@@ -26,7 +26,7 @@ int main() {
         cout << "Menu" << endl;
         cout << "  1. Show all videos" << endl;
         cout << "  2. Show videos, generally, by clasification or by genre." << endl;
-        cout << "  3. Show videos of a series by it ranting." << endl;
+        cout << "  3. Show videos of a series by its rating." << endl;
         cout << "  4. Show movies by its rating." << endl;
         cout << "  5. Rate a movie or series." << endl;
         cout << "  6. Exit" << endl;
@@ -47,13 +47,30 @@ int main() {
 
 
             case 2:
-                system("pause>nul");
+            system("cls");
+            cout << "Select an option: " << endl;
+            cout << "  By classification  (C)" << endl;
+            cout << "  By genre  (G)" << endl;
+            char option;
+            cin >> option;
+
 
                 break;
 
             case 3:
-                system("pause>nul");
+                system("cls");
+                cout << "Select a rating of series for us to search: " << endl;
+                cout << "From: 1-5" << endl;
+                int rating;
+                cin >> rating;
+                if (rating >= 1 && rating <= 5) {
+                    cout << "Series with rating: " << rating << ": " << endl;
+                    cout << serie.showRatedSeries(rating) << endl;
+                } else {
+                    cout << "Invalid rating! Please enter a number between 1 and 5." << endl;
+                }
 
+                system("pause>nul");
                 break;
 
             case 4:

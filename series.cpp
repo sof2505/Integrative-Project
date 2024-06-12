@@ -60,11 +60,10 @@ string Series::show() const {
     return serieoutput;
 }
 
-string Series::showRatedSeries() const {
+string Series::showRatedSeries(int rating) const {
     string ratedseries = "";
     for (const auto& serie : SeriesData) {
-        if (serie[0] == "S2") {
-            if (serie[6] == "2") {
+            if (stoi(serie[6]) == rating) {
                 ratedseries += "ID: " + serie[0] + " Title: " + serie[1] + "\n"
                             + "   Duration: " + serie[2] + " minutes    "
                             + "   Genre: " + serie[3] + "\n"
@@ -73,7 +72,6 @@ string Series::showRatedSeries() const {
                             + "   Rating: " + serie[6] + "\n";
             }
         }
-    }
     return ratedseries;
 }
 
