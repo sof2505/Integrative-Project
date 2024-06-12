@@ -47,7 +47,8 @@ int main() {
                 system("pause>nul"); 
                 break;
 
-            case 2: {
+            case 2:                /* Este y el 5 porfas Emma*/
+                /*{
                 system("cls");
                 cout << "Select an option: " << endl;
                 cout << "  By classification  (C)" << endl;
@@ -66,7 +67,7 @@ int main() {
                 break;
                 } else {
                     cout << "Invalid option!" << endl;
-                }
+                }*/
 
             case 3: {
                 system("cls");

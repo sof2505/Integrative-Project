@@ -46,7 +46,10 @@ string Movies::showRatedMovies(string rating) const {
             ratedmovies += "ID: " + movie[0] + " Title: " + movie[1] + "\n"
             + "   Duration: " + movie[2] + " minutes\n" + ".  Genre: " + movie[3]
             + ".  Rating: " + movie[4] + "\n\n";
-        }
+        }else {
+        cout << "No Movies with that rating" << endl;
+        
+    }
     }
     return ratedmovies;
 }

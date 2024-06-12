@@ -61,17 +61,23 @@ string Series::show() const {
 }
 
 string Series::showRatedSeries(string rating) const {
-    string ratedseries = "";
-    for (const auto& serie : SeriesData) {
-            if ((serie[6]) == rating) {
-                ratedseries += "ID: " + serie[0] + " Title: " + serie[1] + "\n"
-                            + "   Duration: " + serie[2] + " minutes    "
-                            + "   Genre: " + serie[3] + "\n"
-                            + "   Episode: " + serie[4] + "    "
-                            + "   Season: " + serie[5] + "\n"
-                            + "   Rating: " + serie[6] + "\n";
-            }
-        }
+  bool same = false ;
+  string ratedseries = "";
+  for (const auto& serie : SeriesData) {
+    if ((serie[6]) == (rating)) {
+      ratedseries += "ID: " + serie[0] + " Title: " + serie[1] + "\n"
+                    "  Duration: " + serie[2] + " minutes  "
+                    "  Genre: " + serie[3] + "\n"
+                    "  Episode: " + serie[4] + "  "
+                    "  Season: " + serie[5] + "\n"
+                    "  Rating: " + serie[6] + "\n";
+
+    } 
+    }   //Checar esto 
+    if (sizeof(ratedseries) == 0) {
+    cout << "No match found";
+    } else {
     return ratedseries;
 }
 
+}
