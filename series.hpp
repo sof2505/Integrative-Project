@@ -6,7 +6,6 @@ class Series:public Titles{
     private:
         int season;
         int episode;
-        int rating;
         vector<vector<string>> SeriesData;
     public:
         Series();
@@ -16,6 +15,6 @@ class Series:public Titles{
         
         void loadSeries(const string& fileName);
         string show() const override;
-        string showRatedSeries(int rating) const;
+        string showRatedSeries(string rating) const;
 
 };

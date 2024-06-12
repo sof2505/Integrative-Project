@@ -38,10 +38,10 @@ void Movies::loadMovies(const string& fileName) {
     }
 }
 
-string Movies::ratedMovies() const {
+string Movies::showRatedMovies(string rating) const {
     string ratedmovies="";
     for (const auto& movie : movieData) {
-        if (movie[4] == "3")
+        if (movie[4] == rating)
         {
             ratedmovies += "ID: " + movie[0] + " Title: " + movie[1] + "\n"
             + "   Duration: " + movie[2] + " minutes\n" + ".  Genre: " + movie[3]
