@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <locale>
 #include "movies.hpp"
 #include "series.hpp"
 
@@ -53,9 +54,19 @@ int main() {
                 cout << "  By genre  (G)" << endl;
                 char option;
                 cin >> option;
-
+                option << toupper(option);
+                if (option == ("C" || "G")){
+                    if (option == "C" ) {
+                        cout << "Series with rating: " << rating << ": " << endl;
+                        cout << movie.showRatedSeries(ratingSerie) << endl;
+                    } else {
+                        cout << "Invalid rating!" << endl;
+                        cout << "Enter a number from 1 to 5 ." << endl;
+                    }
                 break;
-            }
+                } else {
+                    cout << "Invalid option!" << endl;
+                }
 
             case 3: {
                 system("cls");
