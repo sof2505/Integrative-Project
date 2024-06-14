@@ -5,7 +5,6 @@
 #include <locale>
 #include "movies.hpp"
 #include "series.hpp"
-
 using namespace std;
 
 int main() {
@@ -54,8 +53,8 @@ int main() {
                 cout << "  By genre  (G)" << endl;
                 char option;
                 cin >> option;
-                option << toupper(option);
-                if (option == ('R' || 'G')){
+                option = toupper(option);
+                if (option == 'R' || option == 'G'){
                     if (option == 'R' ) {
                         int rating;
                         cout << "Please select a number between 1 and 5 for the rating" << endl;
@@ -66,18 +65,30 @@ int main() {
                             cout << "Videos with rating " << rating << ": " << endl;
                             cout << serie.showRatedSeries(ratingString) << endl;
                             cout << movie.showRatedMovies(ratingString) << endl;
+                            system("pause>nul"); 
+                            break;;
                         }
                         else 
                         {
                         cout << "Invalid rating!" << endl;
                         cout << "Enter a number from 1 to 5 ." << endl;
                         }
-                    } 
+                    } else if (option == 'G'){
+                        string genre;
+                        cout << "Please enter a genre (e.g. Action, Comedy, Drama, etc.)" << endl;
+
+// FALTA ESTO
+
+
+
+                    }
                 } else {
                     cout << "Invalid option!" << endl;
                 }
 
             case 3: {
+                                system("cls");
+
                 cout << "Select a rating of series for us to search: " << endl;
                 cout << "From: 1-5" << endl;
                 cin >> rating; 
