@@ -27,7 +27,7 @@ int main() {
         cout << "" << endl;
         cout << "Menu" << endl;
         cout << "  1. Show all videos" << endl;
-        cout << "  2. Show videos, generally, by classification or by genre." << endl;
+        cout << "  2. Show videos with a specific or genre." << endl;
         cout << "  3. Show videos of a series by its rating." << endl;
         cout << "  4. Show movies by their rating." << endl;
         cout << "  5. Rate a movie or series." << endl;
@@ -47,30 +47,37 @@ int main() {
                 system("pause>nul"); 
                 break;
 
-            case 2:                /* Este y el 5 porfas Emma*/
-                /*{
+            case 2:                /*No me muestra las pelis ni series*/
                 system("cls");
                 cout << "Select an option: " << endl;
-                cout << "  By classification  (C)" << endl;
+                cout << "  By rating  (R)" << endl;
                 cout << "  By genre  (G)" << endl;
                 char option;
                 cin >> option;
                 option << toupper(option);
-                if (option == ("C" || "G")){
-                    if (option == "C" ) {
-                        cout << "Series with rating: " << rating << ": " << endl;
-                        cout << movie.showRatedSeries(ratingSerie) << endl;
-                    } else {
+                if (option == ('R' || 'G')){
+                    if (option == 'R' ) {
+                        int rating;
+                        cout << "Please select a number between 1 and 5 for the rating" << endl;
+                        cin >> rating;
+                        string ratingString = to_string(rating); 
+                        if (rating >= 1 && rating <= 5)
+                        {
+                            cout << "Videos with rating " << rating << ": " << endl;
+                            cout << serie.showRatedSeries(ratingString) << endl;
+                            cout << movie.showRatedMovies(ratingString) << endl;
+                        }
+                        else 
+                        {
                         cout << "Invalid rating!" << endl;
                         cout << "Enter a number from 1 to 5 ." << endl;
-                    }
-                break;
+                        }
+                    } 
                 } else {
                     cout << "Invalid option!" << endl;
-                }*/
+                }
 
             case 3: {
-                system("cls");
                 cout << "Select a rating of series for us to search: " << endl;
                 cout << "From: 1-5" << endl;
                 cin >> rating; 
