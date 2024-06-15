@@ -10,7 +10,7 @@ using namespace std;
 int main() {
     int opcion;
     bool repeat = true;
-    int rating; // Declare rating variable outside switch
+    int rating; 
 
     Movies movie;
     movie.loadMovies("movies.csv");
@@ -46,7 +46,7 @@ int main() {
                 system("pause>nul"); 
                 break;
 
-            case 2:                /*No me muestra las pelis ni series*/
+            case 2:               
                 system("cls");
                 cout << "Select an option: " << endl;
                 cout << "  By rating  (R)" << endl;
@@ -186,27 +186,5 @@ int main() {
 
     return 0;
 }
-
-
-
-    /*
-    Movies movies;
-    movies.loadMovies("movies.csv");
-    cout << movies.ratedMovies();
-
-    Series serie;
-    serie.loadSeries("series.csv");
-    cout << serie.show();
-    cout << serie.showRatedSeries();
-    return 0;
-    */
-
-
-    //std::vector<Series> series = Series::loadSeries("series.csv");
-
-
-    //for (const auto& serie : series) {
-        //serie.show();
-    //}
 
 
