@@ -81,3 +81,25 @@ string Series::showRatedSeries(string rating) const {
 }
 
 }
+
+string Series::showGenreSeries(string genre) const {
+  bool same = false ;
+  string genreSeries = "";
+  for (const auto& serie : SeriesData) {
+    if ((serie[3]) == (genre)) {
+      genreSeries += "ID: " + serie[0] + " Title: " + serie[1] + "\n"
+                    "  Duration: " + serie[2] + " minutes  "
+                    "  Genre: " + serie[3] + "\n"
+                    "  Episode: " + serie[4] + "  "
+                    "  Season: " + serie[5] + "\n"
+                    "  Rating: " + serie[6] + "\n";
+
+    }
+  }
+    if (sizeof(genreSeries) == 0) {
+    cout << "No match found";
+    } else {
+    return genreSeries;
+}
+
+}

@@ -51,6 +51,19 @@ string Movies::showRatedMovies(string rating) const {
     return ratedmovies;
 }
 
+string Movies::showGenreMovies(string genre) const {
+    string genreMovies="";
+    for (const auto& movie : movieData) {
+        if (movie[3] == genre)
+        {
+            genreMovies += "ID: " + movie[0] + " Title: " + movie[1] + "\n"
+            + "   Duration: " + movie[2] + " minutes\n" + ".  Genre: " + movie[3]
+            + ".  Rating: " + movie[4] + "\n\n";
+        }
+    }
+    return genreMovies;
+}
+
 string Movies::show() const {
     string movieoutput;
     for (const auto& movie : movieData) {

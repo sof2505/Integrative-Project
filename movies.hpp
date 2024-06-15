@@ -19,6 +19,7 @@ class Movies : public Titles {
     void loadMovies(const string& fileName);
     string show() const override;
     string showRatedMovies(string rating) const;
+    string showGenreMovies(string genre) const;
 };
 
 #endif 

@@ -26,7 +26,7 @@ int main() {
         cout << "" << endl;
         cout << "Menu" << endl;
         cout << "  1. Show all videos" << endl;
-        cout << "  2. Show videos with a specific or genre." << endl;
+        cout << "  2. Show videos with a specific rating or specific genre." << endl;
         cout << "  3. Show videos of a series by its rating." << endl;
         cout << "  4. Show movies by their rating." << endl;
         cout << "  5. Rate a movie or series." << endl;
@@ -66,7 +66,7 @@ int main() {
                             cout << serie.showRatedSeries(ratingString) << endl;
                             cout << movie.showRatedMovies(ratingString) << endl;
                             system("pause>nul"); 
-                            break;;
+                            break;
                         }
                         else 
                         {
@@ -75,11 +75,53 @@ int main() {
                         }
                     } else if (option == 'G'){
                         string genre;
-                        cout << "Please enter a genre (e.g. Action, Comedy, Drama, etc.)" << endl;
+                        string gen_choice;
+                        cout << "Please select a letter according to the genre of your choice." << endl;
+                        cout << "  Drama (D)" << endl;
+                        cout << "  Action (A)" << endl;
+                        cout << "  Mystery (M)" << endl;
+                        cout << "  Scifi (S)" << endl;
+                        cin >> gen_choice;
+                        if (gen_choice == "D")
+                        {
+                            cout << "Videos of drama genre: "<< endl;
+                            cout << serie.showGenreSeries("Drama") << endl;
+                            cout << movie.showGenreMovies("Drama") << endl;
+                            system("pause>nul"); 
+                            break;
+                        }
 
-// FALTA ESTO
+                        else if (gen_choice == "A")
+                        {
+                            cout << "Videos of action genre: "<< endl;
+                            cout << serie.showGenreSeries("Action") << endl;
+                            cout << movie.showGenreMovies("Action") << endl;
+                            system("pause>nul"); 
+                            break;
+                        }
 
+                        else if (gen_choice == "M")
+                        {
+                            cout << "Videos of mystery genre: "<< endl;
+                            cout << serie.showGenreSeries("Mystery") << endl;
+                            cout << movie.showGenreMovies("Mystery") << endl;
+                            system("pause>nul"); 
+                            break;
+                        }
+                        
+                        else if (gen_choice == "S")
+                        {
+                            cout << "Videos of scifi genre: "<< endl;
+                            cout << serie.showGenreSeries("Scifi") << endl;
+                            cout << movie.showGenreMovies("Scifi") << endl;
+                            system("pause>nul"); 
+                            break;
+                        }
 
+                        else
+                        {
+                            cout << "Invalid genre!"<< endl;
+                        }
 
                     }
                 } else {
