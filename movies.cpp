@@ -7,7 +7,7 @@ using namespace std;
 
 Movies::Movies()
 {
-    //same as titles
+
 }
 
 Movies::Movies(int _id, const string& _title, const string& _genre, float _rating, float _duration) : Titles(_id, _title, _genre, _rating, _duration) 
@@ -34,8 +34,18 @@ void Movies::loadMovies(const string& fileName) {
         }
         file.close();
     } else {
-        cerr << "Unable to open file " << fileName << endl; // cerr= error message
+        cerr << "Unable to open file " << fileName << endl; // cerr= mensaje de error
     }
+}
+
+string Movies::show() const {
+    string movieoutput;
+    for (const auto& movie : movieData) {
+        movieoutput += "ID: " + movie[0] + " Title: " + movie[1] + "\n"
+        + "   Duration: " + movie[2] + " minutes\n" + "  Genre: " + movie[3]
+        + "   Rating: " + movie[4] + "\n\n";
+    }
+    return movieoutput;
 }
 
 string Movies::showRatedMovies(string rating) const {
@@ -64,12 +74,11 @@ string Movies::showGenreMovies(string genre) const {
     return genreMovies;
 }
 
-string Movies::show() const {
-    string movieoutput;
-    for (const auto& movie : movieData) {
-        movieoutput += "ID: " + movie[0] + " Title: " + movie[1] + "\n"
-        + "   Duration: " + movie[2] + " minutes\n" + "  Genre: " + movie[3]
-        + "   Rating: " + movie[4] + "\n\n";
-    }
-    return movieoutput;
+void Movies::rateMovie(string ID, string new_rating){
+    int num_ID;
+    num_ID = stoi(ID);
+    movieData[num_ID][4] = new_rating;
+    cout << "The rating has been changed successfully"<<endl;
+
+
 }

@@ -1,50 +1,50 @@
-S1,Friends,50,Drama,Episodio 1,1,2
-S1,Friends,50,Drama,Episodio 2,1,2
-S1,Friends,50,Drama,Episodio 3,1,2
-S1,Friends,50,Drama,Episodio 4,1,3
-S1,Friends,50,Drama,Episodio 5,1,5
-S2,The Boys,45,Action,Episodio 1,1,5
-S2,The Boys,45,Action,Episodio 2,1,2
-S2,The Boys,45,Action,Episodio 3,1,5
-S2,The Boys,45,Action,Episodio 4,1,2
-S2,The Boys,45,Action,Episodio 5,1,5
-S3,Sherlock,60,Mystery,Episodio 1,1,5
-S3,Sherlock,60,Mystery,Episodio 2,1,3
-S3,Sherlock,60,Mystery,Episodio 3,1,3
-S3,Sherlock,60,Mystery,Episodio 4,1,4
-S3,Sherlock,60,Mystery,Episodio 5,1,4
-S4,True Beauty,40,Drama,Episodio 1,1,1
-S4,True Beauty,40,Drama,Episodio 2,1,4
-S4,True Beauty,40,Drama,Episodio 3,1,1
-S4,True Beauty,40,Drama,Episodio 4,1,2
-S4,True Beauty,40,Drama,Episodio 5,1,5
-S5,Shogun,55,Action,Episodio 1,1,3
-S5,Shogun,55,Action,Episodio 2,1,3
-S5,Shogun,55,Action,Episodio 3,1,1
-S5,Shogun,55,Action,Episodio 4,1,2
-S5,Shogun,55,Action,Episodio 5,1,3
-S6,Gravity Falls,50,Mystery,Episodio 1,1,5
-S6,Gravity Falls,50,Mystery,Episodio 2,1,4
-S6,Gravity Falls,50,Mystery,Episodio 3,1,3
-S6,Gravity Falls,50,Mystery,Episodio 4,1,2
-S6,Gravity Falls,50,Mystery,Episodio 5,1,2
-S7,Queen of Tears,45,Drama,Episodio 1,1,5
-S7,Queen of Tears,45,Drama,Episodio 2,1,4
-S7,Queen of Tears,45,Drama,Episodio 3,1,1
-S7,Queen of Tears,45,Drama,Episodio 4,1,2
-S7,Queen of Tears,45,Drama,Episodio 5,1,4
-S8,Lost,60,Action,Episodio 1,1,3
-S8,Lost,60,Action,Episodio 2,1,5
-S8,Lost,60,Action,Episodio 3,1,5
-S8,Lost,60,Action,Episodio 4,1,2
-S8,Lost,60,Action,Episodio 5,1,2
-S9,Das Signal,55,Scifi,Episodio 1,1,1
-S9,Das Signal,55,Scifi,Episodio 2,1,1
-S9,Das Signal,55,Scifi,Episodio 3,1,3
-S9,Das Signal,55,Scifi,Episodio 4,1,4
-S9,Das Signal,55,Scifi,Episodio 5,1,5
-S10,Bridgertone,40,Drama,Episodio 1,1,5
-S10,Bridgertone,40,Drama,Episodio 2,1,3
-S10,Bridgertone,40,Drama,Episodio 3,1,2
-S10,Bridgertone,40,Drama,Episodio 4,1,2
-S10,Bridgertone,40,Drama,Episodio 5,1,4
+S1,Breaking Bad,58,Drama,1,1,5
+S1,Breaking Bad,48,Drama,2,1,5
+S1,Breaking Bad,48,Drama,3,1,5
+S1,Breaking Bad,48,Drama,4,1,4
+S1,Breaking Bad,48,Drama,5,1,4
+S2,Cobra Kai,29,Action,1,1,5
+S2,Cobra Kai,28,Action,2,1,2
+S2,Cobra Kai,24,Action,3,1,5
+S2,Cobra Kai,28,Action,4,1,2
+S2,Cobra Kai,34,Action,5,1,5
+S3,Dark,51,Mystery,1,1,5
+S3,Dark,44,Mystery,2,1,3
+S3,Dark,45,Mystery,3,1,3
+S3,Dark,47,Mystery,4,1,1
+S3,Dark,45,Mystery,5,1,1
+S4,Rick and Morty,22,Scifi,1,1,5
+S4,Rick and Morty,22,Scifi,2,1,4
+S4,Rick and Morty,22,Scifi,3,1,5
+S4,Rick and Morty,21,Scifi,4,1,3
+S4,Rick and Morty,21,Scifi,5,1,5
+S5,Arcane,43,Action,1,1,3
+S5,Arcane,40,Action,2,1,3
+S5,Arcane,44,Action,3,1,1
+S5,Arcane,40,Action,4,1,2
+S5,Arcane,40,Action,5,1,3
+S6,Paranormal,52,Mystery,1,1,5
+S6,Paranormal,46,Mystery,2,1,4
+S6,Paranormal,55,Mystery,3,1,3
+S6,Paranormal,49,Mystery,4,1,2
+S6,Paranormal,45,Mystery,5,1,2
+S7,Dr House,44,Drama,1,1,5
+S7,Dr House,43,Drama,2,1,4
+S7,Dr House,44,Drama,3,1,1
+S7,Dr House,43,Drama,4,1,2
+S7,Dr House,44,Drama,5,1,4
+S8,The Umbrella Academy,59,Action,1,1,3
+S8,The Umbrella Academy,58,Action,2,1,5
+S8,The Umbrella Academy,57,Action,3,1,5
+S8,The Umbrella Academy,57,Action,4,1,2
+S8,The Umbrella Academy,60,Action,5,1,2
+S9,Star Trek,60,Scifi,1,1,1
+S9,Star Trek,50,Scifi,2,1,1
+S9,Star Trek,50,Scifi,3,1,3
+S9,Star Trek,50,Scifi,4,1,4
+S9,Star Trek,50,Scifi,5,1,5
+S10,Stranger Things,49,Drama,1,1,5
+S10,Stranger Things,56,Drama,2,1,3
+S10,Stranger Things,53,Drama,3,1,2
+S10,Stranger Things,51,Drama,4,1,2
+S10,Stranger Things,54,Drama,5,1,4

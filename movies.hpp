@@ -20,6 +20,7 @@ class Movies : public Titles {
     string show() const override;
     string showRatedMovies(string rating) const;
     string showGenreMovies(string genre) const;
+    void rateMovie(string ID, string new_rating);
 };
 
 #endif 
