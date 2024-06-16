@@ -74,15 +74,15 @@ int main() {
                 if (option == 'R' || option == 'G'){
                     if (option == 'R' ) {
                         int rating;
-                        cout << "Please select a number between 1 and 5 for the rating" << endl;
+                        cout << "\nPlease select a number between 1 and 5 for the rating" << endl;
                         cin >> rating;
                         string ratingString = to_string(rating); 
                         if (rating >= 1 && rating <= 5)
                         {
-                            cout << "Videos with rating " << rating << ": " << endl;
-                            cout << "Movies with rating " << rating << ": " << endl;
+                            cout << "\nVideos with rating " << rating << ": " << endl;
+                            cout << "\nMovies with rating " << rating << ": " << endl;
                             cout << movie.showRatedMovies(ratingString) << endl;
-                            cout << "Series with rating " << rating << ": " << endl;
+                            cout << "\nSeries with rating " << rating << ": " << endl;
                             cout << serie.showRatedSeries(ratingString) << endl;
                             system("pause>nul"); 
                             break;
@@ -95,7 +95,7 @@ int main() {
                     } else if (option == 'G'){
                         string genre;
                         string gen_choice;
-                        cout << "Please select a letter according to the genre of your choice." << endl;
+                        cout << "\nPlease select a letter according to the genre of your choice." << endl;
                         cout << "  Drama (D)" << endl;
                         cout << "  Action (A)" << endl;
                         cout << "  Mystery (M)" << endl;
@@ -104,7 +104,7 @@ int main() {
                         if (gen_choice == "D")
                         {
                             genre = "Drama";
-                            cout << "Videos of drama genre: "<< endl;
+                            cout << "\nVideos of drama genre: "<< endl;
                             cout << "Movies of drama genre: "<< endl;
                             cout << movie.showGenreMovies(genre) << endl;
                             cout << "Series of drama genre: "<< endl;
@@ -116,7 +116,7 @@ int main() {
                         else if (gen_choice == "A")
                         {
                             genre = "Action";
-                            cout << "Videos of action genre: "<< endl;
+                            cout << "\nVideos of action genre: "<< endl;
                             cout << "Movies of action genre: "<< endl;
                             cout << movie.showGenreMovies(genre) << endl;
                             cout << "Series of action genre: "<< endl;
@@ -128,7 +128,7 @@ int main() {
                         else if (gen_choice == "M")
                         {
                             genre = "Mystery";
-                            cout << "Videos of mystery genre: "<< endl;
+                            cout << "\nVideos of mystery genre: "<< endl;
                             cout << "Movies of mystery genre: "<< endl;
                             cout << movie.showGenreMovies(genre) << endl;
                             cout << "Series of mystery genre: "<< endl;
@@ -140,7 +140,7 @@ int main() {
                         else if (gen_choice == "S")
                         {
                             genre = "Scifi";
-                            cout << "Videos of scifi genre: "<< endl;
+                            cout << "\nVideos of scifi genre: "<< endl;
                             cout << "Movies of scifi genre: "<< endl;
                             cout << movie.showGenreMovies(genre) << endl;
                             cout << "Series of scifi genre: "<< endl;
@@ -168,7 +168,7 @@ int main() {
                 cin >> ID_series;
                 if(find(IDseries_options.begin(), IDseries_options.end(), ID_series) != IDseries_options.end())
                 {
-                    cout << "Select a rating of series for us to search: " << endl;
+                    cout << "\nSelect a rating of series for us to search: " << endl;
                     cout << "From: 1-5" << endl;
                     cin >> rating; 
                     string ratingSerie = to_string(rating); 
