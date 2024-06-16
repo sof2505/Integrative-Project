@@ -83,28 +83,6 @@ string Series::showRatedSeries(string rating) const {
 
 }
 
-string Series::showRatedVideosSpecSeries(string ID_series,string rating) const {
-  bool same = false ;
-  string ratedseries = "";
-  for (const auto& serie : SeriesData) {
-    if (((serie[6]) == (rating)) && ((serie[0]) == (ID_series))) {
-      ratedseries += "ID: " + serie[0] + " Title: " + serie[1] + "\n"
-                    "  Duration: " + serie[2] + " minutes  "
-                    "  Genre: " + serie[3] + "\n"
-                    "  Episode: " + serie[4] + "  "
-                    "  Season: " + serie[5] + "\n"
-                    "  Rating: " + serie[6] + "\n";
-
-    } 
-    }   //Checar esto 
-    if (sizeof(ratedseries) == 0) {
-    cout << "No match found";
-    } else {
-    return ratedseries;
-}
-
-}
-
 string Series::showGenreSeries(string genre) const {
   bool same = false ;
   string genreSeries = "";
@@ -125,17 +103,4 @@ string Series::showGenreSeries(string genre) const {
     return genreSeries;
 }
 
-}
-
-void Series::rateSeries(string ID, string episode, string new_rating)
-{
-    int num_ID;
-    int num_ep;
-    num_ID = stoi(ID);
-    num_ID = num_ID - 1;
-    num_ID = num_ID * 5;
-    num_ep = stoi(episode);
-    num_ep = num_ep - 1;
-    SeriesData[(num_ID) + (num_ep)][6] = new_rating;
-    cout << "The rating of episode " << episode <<" has been changed successfully"<<endl;
 }

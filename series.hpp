@@ -16,8 +16,6 @@ class Series:public Titles{
         void loadSeries(const string& fileName);
         string show() const override;
         string showRatedSeries(string rating) const;
-        string showRatedVideosSpecSeries(string ID_series,string rating) const;
         string showGenreSeries(string genre) const;
-        void rateSeries(string ID,string episode,string new_rating);
 
 };
