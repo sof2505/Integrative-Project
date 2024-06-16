@@ -136,5 +136,5 @@ void Series::rateSeries(string ID, string episode, string new_rating)
     num_ep = stoi(episode);
     num_ep = num_ep - 1;
     SeriesData[(num_ID) + (num_ep)][6] = new_rating;
-    cout << "The rating of episode " << episode <<" has been changed successfully"<<endl;
+    cout << "\nThe rating of episode " << episode <<" has been changed successfully"<<endl;
 }

@@ -79,6 +79,6 @@ void Movies::rateMovie(string ID, string new_rating){
     num_ID = stoi(ID);
     num_ID = num_ID - 1;
     movieData[num_ID][4] = new_rating;
-    cout << "The rating has been changed successfully"<<endl;
+    cout << "\nThe rating has been changed successfully"<<endl;
 
 }

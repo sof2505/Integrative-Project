@@ -174,7 +174,7 @@ int main() {
                     string ratingSerie = to_string(rating); 
 
                     if (rating >= 1 && rating <= 5) {
-                        cout << "Videos of that series with rating: " << rating << ": " << endl;
+                        cout << "\nVideos of that series with rating: " << rating << ": " << endl;
                         cout << serie.showRatedVideosSpecSeries(ID_series,ratingSerie) << endl;
                     } else {
                         cout << "Invalid rating!" << endl;
@@ -200,7 +200,7 @@ int main() {
                 string ratingMovie = to_string(rating);
 
                 if (rating >= 1 && rating <= 5) {
-                    cout << "Movies with rating: " << rating << ": " << endl;
+                    cout << "\nMovies with rating: " << rating << ": " << endl;
                     cout << movie.showRatedMovies(ratingMovie) << endl;
                 } else {
                     cout << "Invalid rating!" << endl;
@@ -219,11 +219,11 @@ int main() {
                 cin >> type_video;
                 if (type_video == "M")
                 {
-                    cout << "Type only the number ID of the movie you want" << endl;
+                    cout << "\nType only the number ID of the movie you want" << endl;
                     cin >> ID_num;
                     if (find(ID_options.begin(), ID_options.end(), ID_num) != ID_options.end())
                     {
-                        cout << "Select a number bewteen 1 and 5 to rate the movie" << endl;
+                        cout << "\nSelect a number bewteen 1 and 5 to rate the movie" << endl;
                         cin >> rate_user;
                         if (find(rate_options.begin(), rate_options.end(), rate_user) != rate_options.end())
                         {
@@ -245,15 +245,15 @@ int main() {
                 }
                 else if (type_video == "S")
                 {
-                    cout << "Type only the number ID of the series you want" << endl;
+                    cout << "\nType only the number ID of the series you want" << endl;
                     cin >> ID_num;
                     if (find(ID_options.begin(), ID_options.end(), ID_num) != ID_options.end())
                     {
-                        cout << "Type the episode number of that series" << endl;
+                        cout << "\nType the episode number of that series" << endl;
                         cin >> episode_user;
                         if (find(ep_options.begin(), ep_options.end(), episode_user) != ep_options.end())
                         {
-                            cout << "Select a number bewteen 1 and 5 to rate the movie" << endl;
+                            cout << "\nSelect a number bewteen 1 and 5 to rate the movie" << endl;
                             cin >> rate_user;
                             if(find(rate_options.begin(), rate_options.end(), rate_user) != rate_options.end())
                             {
