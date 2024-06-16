@@ -34,7 +34,7 @@ void Movies::loadMovies(const string& fileName) {
         }
         file.close();
     } else {
-        cerr << "Unable to open file " << fileName << endl; // cerr= mensaje de error
+        cerr << "Unable to open file " << fileName << endl; // cerr= error message
     }
 }
 
