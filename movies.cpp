@@ -38,6 +38,16 @@ void Movies::loadMovies(const string& fileName) {
     }
 }
 
+string Movies::show() const {
+    string movieoutput;
+    for (const auto& movie : movieData) {
+        movieoutput += "ID: " + movie[0] + " Title: " + movie[1] + "\n"
+        + "   Duration: " + movie[2] + " minutes\n" + "  Genre: " + movie[3]
+        + "   Rating: " + movie[4] + "\n\n";
+    }
+    return movieoutput;
+}
+
 string Movies::showRatedMovies(string rating) const {
     string ratedmovies="";
     for (const auto& movie : movieData) {
@@ -64,12 +74,11 @@ string Movies::showGenreMovies(string genre) const {
     return genreMovies;
 }
 
-string Movies::show() const {
-    string movieoutput;
-    for (const auto& movie : movieData) {
-        movieoutput += "ID: " + movie[0] + " Title: " + movie[1] + "\n"
-        + "   Duration: " + movie[2] + " minutes\n" + "  Genre: " + movie[3]
-        + "   Rating: " + movie[4] + "\n\n";
-    }
-    return movieoutput;
+void Movies::rateMovie(string ID, string new_rating){
+    int num_ID;
+    num_ID = stoi(ID);
+    movieData[num_ID][4] = new_rating;
+    cout << "The rating has been changed successfully"<<endl;
+
+
 }
