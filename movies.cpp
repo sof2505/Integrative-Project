@@ -7,7 +7,7 @@ using namespace std;
 
 Movies::Movies()
 {
-
+    //same as titles
 }
 
 Movies::Movies(int _id, const string& _title, const string& _genre, float _rating, float _duration) : Titles(_id, _title, _genre, _rating, _duration) 

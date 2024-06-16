@@ -5,7 +5,8 @@
 #include <string>
 Series::Series()
 {
-
+    season = 0;
+    episode = 0;
 }
 
 Series::Series(int _id, string _title, string _genre, float _rating, float _duration, int _season, int _episode) : Titles(_id, _title, _genre, _rating, _duration)
